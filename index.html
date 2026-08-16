@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Privacy policy for the Memory mobile app.">
+  <link rel="canonical" href="https://hwangso595.github.io/memory-privacy/">
+  <title>Memory Privacy Policy</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      font-synthesis: none;
+      line-height: 1.6;
+      --background: #f7f5ef;
+      --card: #ffffff;
+      --ink: #1d251f;
+      --muted: #5f6962;
+      --line: #dfe1da;
+      --link: #315b45;
+    }
+
+    * { box-sizing: border-box; }
+    body {
+      background: var(--background);
+      color: var(--ink);
+      margin: 0;
+    }
+    main {
+      margin: 0 auto;
+      max-width: 760px;
+      padding: 56px 22px 80px;
+    }
+    article {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 22px;
+      padding: clamp(24px, 5vw, 48px);
+    }
+    h1, h2 { line-height: 1.2; }
+    h1 { font-size: clamp(2rem, 7vw, 3.25rem); letter-spacing: -0.04em; margin: 0 0 8px; }
+    h2 { font-size: 1.25rem; margin: 36px 0 10px; }
+    p, li { color: var(--muted); }
+    ul { padding-left: 22px; }
+    li + li { margin-top: 8px; }
+    strong { color: var(--ink); }
+    a { color: var(--link); }
+    .effective { font-size: 0.9rem; margin: 0 0 28px; }
+    .summary {
+      background: #e5efe8;
+      border-radius: 14px;
+      color: #294c3a;
+      font-size: 1.05rem;
+      padding: 18px;
+    }
+    code { font-size: 0.9em; }
+    footer { color: var(--muted); font-size: 0.85rem; margin-top: 28px; text-align: center; }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --background: #151a16;
+        --card: #1d241f;
+        --ink: #f2f3ee;
+        --muted: #bdc5be;
+        --line: #384139;
+        --link: #a9d0b7;
+      }
+      .summary { background: #263d2f; color: #d9eadd; }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <article>
+      <h1>Memory privacy policy</h1>
+      <p class="effective"><strong>Effective:</strong> August 16, 2026</p>
+      <p class="effective"><strong>Developer:</strong> DoubleMM</p>
+
+      <p class="summary"><strong>Memory is local by default.</strong> The app has no account requirement and does not collect, sell, or share your memories. It has no ads, analytics, tracking, behavioral telemetry, or crash-reporting service. The only optional network actions are the model download and a content-free answer-safety report, both described below.</p>
+
+      <h2>What stays on your device</h2>
+      <p>Memory processes and stores the following inside its private app storage:</p>
+      <ul>
+        <li>Memories you write or import, including text, dates, titles, people, places, and moods.</li>
+        <li>Local search indexes, embeddings, settings, commands, and installed Memory Pack state.</li>
+        <li>For photos you approve, a system-library pointer, limited metadata, and locally derived context. Memory does not create a durable second image or thumbnail archive.</li>
+        <li>If you choose a phone integration, minimized fields from calendars you select, names, organizations, and birthdays from contacts you select, or one rounded foreground location observation when you press Sync.</li>
+      </ul>
+      <p>This information is stored in a SQLCipher-encrypted database. Its random key is held by the operating system’s secure credential storage. Search queries and generated answers are processed in memory and are not written to the archive. Search, embeddings, and answers run on the device.</p>
+
+      <h2>Permissions</h2>
+      <p>Optional features may ask for access to photos, selected calendars, selected contacts, or foreground location. You can deny or revoke these permissions in system Settings. Memory does not request background location, microphone, SMS, or call-log access. It does not use the camera.</p>
+      <p>Calendar actions are shown for confirmation before Memory creates or updates an event. Memory never deletes calendar events. Core writing and private search work without these permissions.</p>
+
+      <h2>Network use</h2>
+      <p>One optional data transfer is a 1.28 GB model-pack download. Before it starts, Memory shows this disclosure and asks you to confirm. If you confirm, Memory connects directly to Hugging Face to download the two model files. Hugging Face can receive standard connection data, including your IP address, device and user-agent information, and use of its download service. Memory sends no memories, questions, answers, photos, contacts, calendar data, or location. After the download, all inference runs on your device.</p>
+      <p>See the <a href="https://huggingface.co/privacy">Hugging Face privacy policy</a> for its handling of connection data.</p>
+      <p><strong>Memory Cloud is not included or configured in the release covered by this policy.</strong> This release does not upload memory records to a Memory service. If a future release offers a cloud service, it will require explicit setup and updated disclosure before use.</p>
+
+      <h2>Answer-safety reports</h2>
+      <p>Every generated answer includes an optional in-app report action. Nothing is sent when you open the report form. If you choose a reason and press <strong>Submit report</strong>, Memory sends only the selected reason category, app version, and local model identifier. The report contains no prompt, answer, source, memory, photo, free text, account identifier, device identifier, email address, or location.</p>
+      <p>The HTTPS report service is hosted by Google Apps Script. Google can automatically receive ordinary connection data such as your IP address, user-agent information, and request time under the <a href="https://policies.google.com/privacy">Google Privacy Policy</a>. Memory requests omit cookies and developer-created account or device identifiers. The service immediately adds accepted report fields to a daily anonymous aggregate counter; the developer does not retain individual report bodies or precise submission times. The developer retains only those aggregate counters while needed to review answer quality and safety and improve on-device safeguards, then deletes them.</p>
+
+      <h2>No ads or tracking</h2>
+      <p>Memory has no developer-operated analytics, advertising, tracking, behavioral telemetry, or crash-reporting endpoint. The developer cannot view your archive and may receive only the limited report and connection data described above. Memory does not sell personal data or share it with advertisers or data brokers.</p>
+      <p>If you explicitly export or share a file, the destination you choose receives that file and handles it under its own terms. Memory deletes and verifies removal of its temporary export copy after the share flow. Source documents selected for import are read locally; app-owned processing copies are removed and checked after import.</p>
+
+      <h2>Gallery pointers and originals</h2>
+      <p>Gallery integration is optional and removable. Disconnecting it removes Memory’s encrypted photo index, pointers, and derived records. It never deletes the original photos or videos in your system library. Those originals remain under your control in the Photos or gallery app.</p>
+
+      <h2>Retention and erasure</h2>
+      <p>Your local information remains until you remove it. In <strong>Settings → Storage and erasure</strong>, Memory provides:</p>
+      <ul>
+        <li><strong>Remove local models</strong> — removes complete and partial model files.</li>
+        <li><strong>Erase archive; keep models</strong> — removes the encrypted archive, its key, app settings and integration state, temporary app files, and Memory-held document or photo access grants.</li>
+        <li><strong>Erase everything from this device</strong> — removes the archive and downloaded models together.</li>
+      </ul>
+      <p>These actions read back each included app-private boundary and show a receipt only after files and keys are verified absent. “Verified absent” means the named item is no longer present or readable through the app and operating-system APIs; mobile flash storage cannot guarantee forensic overwriting of physical cells.</p>
+      <p>Local erasure does not delete system-library originals, source files, exports saved elsewhere, operating-system permission grants, or existing device backups. Manage those separately. Android builds disable new Auto Backup copies, but the app cannot retract older or manufacturer-managed backups. On iOS, use <strong>Delete App</strong>, not Offload App, after completing in-app erasure if you also want to remove the app container.</p>
+
+      <h2>Security</h2>
+      <p>Memory limits data to app-private storage, encrypts its archive, and disables Android backup in current builds. No security measure is absolute; device compromise, operating-system backups, or files you export can fall outside Memory’s control.</p>
+
+      <h2>Children</h2>
+      <p>Memory is not directed to children under 13, and the developer does not knowingly collect personal information from children.</p>
+
+      <h2>Policy access and changes</h2>
+      <p>The app links to this page from Settings. Opening the link uses your browser; GitHub Pages may receive ordinary web connection logs under the <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement">GitHub Privacy Statement</a>. Memory does not receive those logs.</p>
+      <p>If Memory’s data practices change, this page and its effective date will be updated before the changed practice is released.</p>
+
+      <h2>Contact</h2>
+      <p>Questions, privacy requests, or help deleting local data: <a href="mailto:hwansung595@gmail.com">hwansung595@gmail.com</a>. You can delete Memory-managed local data directly in Settings without contacting us. For requests concerning Hugging Face connection logs, see the contact and rights options in the Hugging Face privacy policy linked above.</p>
+    </article>
+    <footer>Memory · private by default</footer>
+  </main>
+</body>
+</html>
